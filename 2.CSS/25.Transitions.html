@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transitions</title>
+    <style>
+        .bluebox{
+            background-color: #3A5795;
+            color: white;
+            height: 100px;
+            width: 100px;
+            transition: width 3s;
+
+        }
+        .bluebox:hover{
+            width: 300px;
+        }
+        .yellowbox{
+            background-color: rgb(222, 224, 85);
+            height: 100px;
+            width: auto;
+            /* transform: width 1s; */
+        }
+        .yellowbox:hover{
+            width: 300px;
+        }
+        .greenbox{
+            background-color: #31af37;
+            height: 100px;
+            width: 100px;
+            transition: width 1s, height 1s, transform 1s;
+        }
+        .greenbox:hover{
+            width: 300px;
+            height: 300px;
+            transform: rotateX(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="bluebox">
+        <p>Facebook</p>
+    </div>
+    <div class="yellowbox">
+        <p>Apple</p>
+    </div>
+    <div class="greenbox">
+        <P>Microsoft</P>
+    </div>
+</body>
+</html>
