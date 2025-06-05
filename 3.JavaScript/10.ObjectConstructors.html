@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Object Constructors.</title>
+</head>
+<body>
+    <h3>Objects can also be created using constructors.</h3>
+    <script>
+        function phone(make, model, warranty, color) {
+            this.make = make;
+            this.model = model;
+            this.warranty = warranty;
+            this.color = color;
+            this.extendWarranty = function(years){
+                // this.warranty = this.warranty + years;
+                this.warranty += years;
+            }
+        }
+
+        var myPhone = new phone("Apple", "iPhone 14", 2, "Black");
+        console.log(myPhone);
+        myPhone.extendWarranty(2);
+        console.log(myPhone);
+
+        myPhone.condition = "New";
+        console.log(myPhone);
+        console.log(myPhone.condition);
+
+        var myPhone2 = new phone("Samsung", "Galaxy S23", 1, "White");
+        console.log(myPhone2);
+        console.log(myPhone2.condition); // undefined
+        myPhone2.condition = "New";
+        console.log(myPhone2.condition);
+    </script>
+</body>
+</html>

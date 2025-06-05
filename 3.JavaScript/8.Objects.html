@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Object</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <p>An object is a standalone entity, with properties and type.</p>
+    <p>Objects are similar to real-life objects, like a car, which has properties like color and model.</p>
+
+    <script>
+        var myPhone = {
+            make : "Apple",
+            model : "iPhone 14",
+            warranty : 12,
+            color : "black",
+        };
+
+        window.console.log(myPhone);
+        delete myPhone.warranty;
+        window.console.log(myPhone);
+        window.console.log(myPhone.model);
+
+        var myOtherPhone = myPhone;
+        window.console.log(myOtherPhone);
+        myOtherPhone.color = "white";
+        window.console.log(myOtherPhone);
+        window.console.log(myPhone);
+        
+    </script>
+</body>
+</html>

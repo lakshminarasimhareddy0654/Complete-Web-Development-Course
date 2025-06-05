@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Arrays.</title>
+</head>
+<body>
+    <p id="arrays">Arrays</p>
+    <script>
+        var myArray = [1, 2, 3, 4, 5];
+        console.log(myArray);
+        document.getElementById("arrays").innerHTML = myArray;
+        myArray.push(6); // Adds an element to the end of the array
+        console.log(myArray);
+
+        var myArray2 = new Array(5); // Creates an array with 5 undefined elements
+        console.log(myArray2);
+        myArray2[0] = 10; // Assigns a value to the first element
+        myArray2[1] = 20; // Assigns a value to the second element
+        myArray2[2] = 30; // Assigns a value to the third element
+        myArray2[3] = 40; // Assigns a value to the fourth element
+        myArray2[4] = 50; // Assigns a value to the fifth element
+        console.log(myArray2);
+        document.getElementById("arrays").innerHTML += "<br>" + myArray2;
+        window.console.log(myArray2[3]); // Accesses the fourth element of the array
+        document.getElementById("arrays").innerHTML += "<br>" + myArray2[3];
+
+        function showResult(x){
+            document.getElementById("arrays").innerHTML += "<br>Result: " + x;
+        }
+        showResult(myArray[2]);
+        showResult(myArray2[1]);
+        showResult(myArray2);
+
+        myArray.splice(1, 1); // Removes the second element from myArray
+        console.log(myArray);
+        myArray2.splice(2, 2); // Removes the third and fourth elements from myArray2
+        console.log(myArray2);
+        myArray.splice(1, 0, 90); // Inserts 90 at the second position in myArray
+        console.log(myArray);
+
+        myArray.sort(); // Sorts myArray in ascending order
+        console.log(myArray);
+
+        myArray2.reverse(); // Reverses the order of elements in myArray2
+        console.log(myArray2);
+
+        var myArray3 = myArray.concat(myArray2); // Combines myArray and myArray2 into a new array
+        console.log(myArray3);
+    </script>
+</body>
+</html>
